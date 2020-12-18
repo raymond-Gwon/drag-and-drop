@@ -11,34 +11,34 @@ for (const empty of empties) {
     empty.addEventListener('dragenter', dragEnter);
     empty.addEventListener('dragleave', dragLeave);
     empty.addEventListener('drop', dragDrop);
-}
+};
 
 //  Drag Function
 function dragStart() {
     this.className += ' hold';
     setTimeout(() => this.className = 'invisible', 0);
-}
+};
 
 function dragEnd() {
     this.className = 'fill';
-}
+};
 
 
 function dragOver(e) {
     e.preventDefault();
-}
+};
 
 function dragEnter(e) {
     console.log(e)
     e.preventDefault();
     this.className += ' hovered';
-}
+};
 
 function dragLeave() {
     this.className = 'empty';
-}
+};
 
 function dragDrop() {
     this.className = 'empty';
     this.append(fill);
-}
+};
